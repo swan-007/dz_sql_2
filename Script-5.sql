@@ -42,10 +42,12 @@ create table if not exists track(
 
 create table if not exists collection (
 			id SERIAL primary key,
-			track_name VARCHAR not null ,
 			name VARCHAR (60)  not null,
 			yea date 
 );
+
+
+
 
 create table if not exists track_collection (
 			track_id integer references track(id),
